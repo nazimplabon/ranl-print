@@ -1,0 +1,10 @@
+{% extends 'admin/base.html' %}
+{% load static i18n %}
+{% block title %}{{ title }} | RANL PRINT{% endblock %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" href="{% static 'admin/css/rnl_admin.css' %}">
+{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">RANL PRINT <span>Business Management</span></a></h1>
+{% endblock %}
+{% block nav-global %}{{ block.super }}{% endblock %}

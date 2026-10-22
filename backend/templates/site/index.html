@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RANL PRINT — Design. Print. Deliver.</title>
+    <meta
+      name="description"
+      content="RANL PRINT — professional digital, large format, photo and creative printing solutions."
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site/css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="loader-mark">
+        <span>C</span><span>M</span><span>Y</span><span>K</span>
+      </div>
+      <div class="loader-line"><i></i></div>
+      <p>Preparing your print...</p>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#top" aria-label="RANL PRINT home">
+        <img
+          src="{% static 'site/assets/ranl-print-logo2.png' %}"
+          alt="RANL PRINT logo"
+        />
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a class="active" href="#top">Home</a><a href="#services">Services</a
+        ><a href="#works">Our Works</a><a href="#about">About</a
+        ><a href="#quote">Get a Quote</a><a href="#blog">Blog</a
+        ><a href="#track">Track Order</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone-pill" href="#contact">Contact RANL PRINT</a
+        ><a class="btn btn-primary btn-small" href="#quote"
+          >Get a Quote <b>→</b></a
+        ><button class="menu-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#top">Home</a><a href="#services">Services</a
+      ><a href="#works">Our Works</a><a href="#about">About</a
+      ><a href="#quote">Get a Quote</a><a href="#blog">Blog</a
+      ><a href="#track">Track Order</a><a href="#contact">Contact</a>
+    </div>
+
+    <section class="hero section-dark" id="top">
+      <div class="hero-background" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="dot"></span> PROFESSIONAL PRINTING SOLUTIONS
+          </div>
+          <h1>Design.<br /><em>Print.</em> <strong>Deliver.</strong></h1>
+          <p class="hero-lead">
+            From ideas to finished prints — we make every impression count.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary magnetic" href="#services"
+              >Explore Services <b>→</b></a
+            ><a class="btn btn-outline magnetic" href="#quote"
+              >▣ &nbsp; Get a Quote</a
+            >
+          </div>
+          <div class="trust-row">
+            <span>◇ <b>Premium</b><small>Quality</small></span
+            ><span>ϟ <b>Fast</b><small>Turnaround</small></span
+            ><span>▣ <b>Nationwide</b><small>Delivery</small></span
+            ><span>♧ <b>Friendly</b><small>Support</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-light" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow blue">OUR SERVICES</span>
+            <h2>Printing Solutions <span>for Every Need</span></h2>
+          </div>
+          <a class="text-link" href="#quote">View All Services →</a>
+        </div>
+        <div class="service-grid">
+          <article class="service-card tilt three-d-card reveal">
+            <div class="service-art art-card">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-business-cards.webp' %}"
+                alt="Business Cards"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Business Cards</h3>
+              <p>Premium cards for lasting impressions.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+          <article class="service-card tilt three-d-card reveal delay-1">
+            <div class="service-art art-flyer">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-flyers.webp' %}"
+                alt="Flyers"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Flyers</h3>
+              <p>Perfect for promotions and events.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+          <article class="service-card tilt three-d-card reveal delay-2">
+            <div class="service-art art-brochure">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-brochures.webp' %}"
+                alt="Brochures"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Brochures</h3>
+              <p>Showcase your business beautifully.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+          <article class="service-card tilt three-d-card reveal delay-3">
+            <div class="service-art art-poster">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-posters.webp' %}"
+                alt="Posters"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Posters</h3>
+              <p>Large prints for bigger impact.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+          <article class="service-card tilt three-d-card reveal delay-1">
+            <div class="service-art art-sticker">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-stickers.webp' %}"
+                alt="Stickers"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Stickers</h3>
+              <p>Custom stickers for any purpose.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+          <article class="service-card tilt three-d-card reveal delay-2">
+            <div class="service-art art-photo">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/service-photo-printing.webp' %}?v=20261021-1"
+                alt="Photo Printing"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <h3>Photo Printing</h3>
+              <p>High-quality photo prints.</p>
+            </div>
+            <a href="#quote">↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="process-heading reveal">
+          <div>
+            <span class="eyebrow blue">OUR PROCESS</span>
+            <h2>From Design <span>to Delivery</span></h2>
+            <p>A seamless process to bring your ideas to life.</p>
+          </div>
+          <div class="process-note">
+            Your<br /><strong>Vision</strong><br />Our Print <b>↗</b>
+          </div>
+        </div>
+
+        <div class="process-track process-track-visual">
+          <article class="process-step-visual reveal">
+            <div class="process-step-top">
+              <span class="step-num">01</span><i></i>
+            </div>
+            <div class="process-art process-design" aria-label="Design process">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/process-design.webp' %}"
+                alt="Design process"
+                loading="eager"
+              />
+            </div>
+            <h3>Design</h3>
+            <p>Your idea, our creative support.</p>
+          </article>
+
+          <div class="process-arrow reveal delay-1" aria-hidden="true">→</div>
+
+          <article class="process-step-visual reveal delay-1">
+            <div class="process-step-top">
+              <span class="step-num pink">02</span><i></i>
+            </div>
+            <div class="process-art process-print" aria-label="Print process">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/process-print.webp' %}"
+                alt="Print process"
+                loading="eager"
+              />
+            </div>
+            <h3>Print</h3>
+            <p>High-quality printing with modern machines.</p>
+          </article>
+
+          <div class="process-arrow reveal delay-2" aria-hidden="true">→</div>
+
+          <article class="process-step-visual reveal delay-2">
+            <div class="process-step-top">
+              <span class="step-num yellow">03</span><i></i>
+            </div>
+            <div
+              class="process-art process-finish"
+              aria-label="Finishing process"
+            >
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/process-finish.webp' %}"
+                alt="Finishing process"
+                loading="eager"
+              />
+            </div>
+            <h3>Finish</h3>
+            <p>Precise finishing for perfect results.</p>
+          </article>
+
+          <div class="process-arrow reveal delay-3" aria-hidden="true">→</div>
+
+          <article class="process-step-visual reveal delay-3">
+            <div class="process-step-top">
+              <span class="step-num green">04</span><i></i>
+            </div>
+            <div
+              class="process-art process-deliver"
+              aria-label="Delivery process"
+            >
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/process-deliver.webp' %}"
+                alt="Delivery process"
+                loading="eager"
+              />
+            </div>
+            <h3>Deliver</h3>
+            <p>Safe and fast delivery to your door.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section machines-section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">OUR MACHINES</span>
+            <h2>Modern Printing <span>Technology</span></h2>
+          </div>
+          <p>
+            Advanced equipment for high-quality, vibrant colors and precise
+            results.
+          </p>
+        </div>
+        <div class="machine-grid">
+          <article class="machine-card three-d-card reveal">
+            <div class="machine-visual machine-digital">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/machine-digital.webp' %}"
+                alt="Digital printing machine"
+                loading="eager"
+              />
+            </div>
+            <div class="machine-meta">
+              <span>Digital Printing</span
+              ><b>Epson &nbsp;|&nbsp; Ricoh &nbsp;|&nbsp; Xerox</b>
+            </div>
+          </article>
+          <article class="machine-card three-d-card reveal delay-1">
+            <div class="machine-visual machine-large">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/machine-large-format.webp' %}"
+                alt="Large format printer"
+                loading="eager"
+              />
+            </div>
+            <div class="machine-meta">
+              <span>Large Format Printing</span
+              ><b>Printdot EP1901 · Epson i3200-E1</b>
+            </div>
+          </article>
+          <article class="machine-card three-d-card reveal delay-2">
+            <div class="machine-visual machine-photo">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/machine-photo.webp' %}"
+                alt="Photo printer"
+                loading="eager"
+              />
+            </div>
+            <div class="machine-meta">
+              <span>Photo & Creative Printing</span><b>Epson L18050</b>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="works">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow blue">OUR WORKS</span>
+            <h2>Bringing Ideas <span>to Life</span></h2>
+          </div>
+          <a class="text-link" href="#quote">View All Works →</a>
+        </div>
+        <div class="filter-row reveal">
+          <button class="filter active" data-filter="all">All</button
+          ><button class="filter" data-filter="cards">Business Cards</button
+          ><button class="filter" data-filter="flyers">Flyers</button
+          ><button class="filter" data-filter="brochures">Brochures</button
+          ><button class="filter" data-filter="posters">Posters</button
+          ><button class="filter" data-filter="stickers">Stickers</button
+          ><button class="filter" data-filter="photos">Photo Prints</button>
+        </div>
+        <div class="work-grid">
+          <article
+            class="work-card work-tall cards three-d-card reveal"
+            data-category="cards"
+          >
+            <div class="mock-card">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-business-cards.webp' %}"
+                alt="Business card work"
+                loading="eager"
+              />
+            </div>
+            <span>Business Cards</span>
+          </article>
+          <article
+            class="work-card flyers three-d-card reveal"
+            data-category="flyers"
+          >
+            <div class="mock-flyer">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-flyers.webp' %}"
+                alt="Flyer work"
+                loading="eager"
+              />
+            </div>
+            <span>Flyers</span>
+          </article>
+          <article
+            class="work-card brochures three-d-card reveal delay-1"
+            data-category="brochures"
+          >
+            <div class="mock-brochure">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-brochures.webp' %}"
+                alt="Brochure work"
+                loading="eager"
+              />
+            </div>
+            <span>Brochures</span>
+          </article>
+          <article
+            class="work-card posters three-d-card reveal delay-2"
+            data-category="posters"
+          >
+            <div class="mock-poster">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-posters.webp' %}"
+                alt="Poster work"
+                loading="eager"
+              />
+            </div>
+            <span>Posters</span>
+          </article>
+          <article
+            class="work-card stickers three-d-card reveal delay-1"
+            data-category="stickers"
+          >
+            <div class="mock-sticker">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-stickers.webp' %}"
+                alt="Sticker work"
+                loading="eager"
+              />
+            </div>
+            <span>Stickers</span>
+          </article>
+          <article
+            class="work-card photos three-d-card reveal delay-2"
+            data-category="photos"
+          >
+            <div class="mock-photo">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/work-photo-prints.webp' %}"
+                alt="Photo print work"
+                loading="eager"
+              />
+            </div>
+            <span>Photo Prints</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-section section-dark" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <span class="eyebrow">WHY CHOOSE RANL PRINT</span>
+          <h2>Your Trusted<br /><span>Printing Partner</span></h2>
+          <p>
+            We are committed to delivering high-quality printing solutions with
+            creativity, precision and care.
+          </p>
+          <a class="btn btn-primary" href="#quote">Learn More <b>→</b></a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <strong data-counter="7">0</strong><span>Years Experience</span>
+          </div>
+          <div class="stat reveal delay-1">
+            <strong data-counter="1000">0</strong><span>Orders Completed</span>
+          </div>
+          <div class="stat reveal delay-2">
+            <strong data-counter="50">0</strong><span>Printing Solutions</span>
+          </div>
+          <div class="stat reveal delay-3">
+            <strong data-counter="100">0</strong
+            ><span>Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-section" id="quote">
+      <div class="quote-background" aria-hidden="true"></div>
+      <div class="quote-overlay" aria-hidden="true"></div>
+      <div class="container quote-layout">
+        <div class="quote-copy reveal">
+          <span class="eyebrow blue">GET A QUOTE</span>
+          <h2>What Do You <span>Want to Print?</span></h2>
+          <p>
+            Configure your job, upload artwork and send your requirements
+            directly to RANL PRINT.
+          </p>
+          <div class="quote-steps">
+            <span class="active">01 <small>Product</small></span
+            ><i>→</i><span>02 <small>Details</small></span
+            ><i>→</i><span>03 <small>Options</small></span
+            ><i>→</i><span>04 <small>Upload</small></span
+            ><i>→</i><span>05 <small>Contact</small></span>
+          </div>
+          <button class="btn btn-primary magnetic" id="openQuote" type="button">
+            Get a Quote Now <b>→</b>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="quoteModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="quote-modal">
+        <button class="modal-close" data-close type="button">×</button>
+        <div class="modal-head">
+          <span class="eyebrow blue">RANL PRINT</span>
+          <h3>Build Your Quote</h3>
+          <p>
+            Choose your product and options, then send your requirements to our
+            team.
+          </p>
+        </div>
+        <form id="quoteForm" enctype="multipart/form-data">
+          <div class="quote-progress">
+            <i class="progress-active"></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="quote-panel active" data-step="1">
+            <label>What do you want to print?</label>
+            <div class="choice-grid" id="productChoices">
+              <div class="quote-loading">Loading products…</div>
+            </div>
+            <div class="quote-error" id="productError"></div>
+            <div class="modal-nav">
+              <button class="btn btn-primary next-step" type="button">
+                Continue →
+              </button>
+            </div>
+          </div>
+
+          <div class="quote-panel" data-step="2">
+            <div class="field-row">
+              <label
+                >Quantity<input
+                  name="quantity"
+                  id="quoteQuantity"
+                  type="number"
+                  min="1"
+                  value="500"
+                  placeholder="e.g. 500"
+                  required /></label
+              ><label
+                >Size<select name="size" id="quoteSize">
+                  <option value="">Select size</option>
+                </select></label
+              >
+            </div>
+            <div class="field-row">
+              <label
+                >Paper / GSM<select name="paper" id="quotePaper">
+                  <option value="">Select paper</option>
+                </select></label
+              ><label
+                >Printing<select name="printing" id="quotePrinting">
+                  <option value="">Select printing</option>
+                </select></label
+              >
+            </div>
+            <div class="price-preview">
+              <strong>Our team will contact you with a price.</strong>
+            </div>
+            <div class="modal-nav">
+              <button class="btn btn-outline prev-step" type="button">
+                ← Back</button
+              ><button class="btn btn-primary next-step" type="button">
+                Continue →
+              </button>
+            </div>
+          </div>
+
+          <div class="quote-panel" data-step="3">
+            <label>Finishing & delivery</label>
+            <div class="check-grid" id="finishingChoices">
+              <div class="quote-loading">Select a product first.</div>
+            </div>
+            <div class="modal-nav">
+              <button class="btn btn-outline prev-step" type="button">
+                ← Back</button
+              ><button class="btn btn-primary next-step" type="button">
+                Continue →
+              </button>
+            </div>
+          </div>
+
+          <div class="quote-panel" data-step="4">
+            <label>Upload your artwork</label
+            ><label class="upload-box"
+              ><input
+                id="artworkInput"
+                type="file"
+                name="artwork"
+                accept=".pdf,.jpg,.jpeg,.png,.ai,.psd"
+                hidden
+              /><span class="upload-icon">↑</span
+              ><b id="uploadText">Drop your file here or browse</b
+              ><small>PDF, JPG, PNG, AI or PSD · up to 20 MB</small></label
+            >
+            <div class="quote-error" id="uploadError"></div>
+            <div class="modal-nav">
+              <button class="btn btn-outline prev-step" type="button">
+                ← Back</button
+              ><button class="btn btn-primary next-step" type="button">
+                Continue →
+              </button>
+            </div>
+          </div>
+
+          <div class="quote-panel" data-step="5">
+            <div class="field-row">
+              <label
+                >Full name<input
+                  name="name"
+                  required
+                  placeholder="Your name" /></label
+              ><label
+                >Phone<input name="phone" required placeholder="01XXXXXXXXX"
+              /></label>
+            </div>
+            <label class="full-width-field"
+              >Email<input
+                name="email"
+                type="email"
+                placeholder="you@example.com" /></label
+            ><label class="full-width-field"
+              >Notes<textarea
+                name="notes"
+                rows="4"
+                placeholder="Anything else we should know?"
+              ></textarea>
+            </label>
+            <div class="quote-error" id="submitError"></div>
+            <div class="modal-nav">
+              <button class="btn btn-outline prev-step" type="button">
+                ← Back</button
+              ><button class="btn btn-primary" id="submitQuote" type="submit">
+                Send Quote Request →
+              </button>
+            </div>
+          </div>
+          <div class="quote-success" id="quoteSuccess" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <section class="section section-light" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow blue">CLIENT FEEDBACK</span>
+            <h2>What Our Clients <span>Say</span></h2>
+          </div>
+          <div class="slider-controls">
+            <button data-test-prev>←</button><button data-test-next>→</button>
+          </div>
+        </div>
+        <div class="testimonial-track" id="testimonialTrack">
+          <article class="testimonial">
+            <div class="avatar">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/testimonial-tanvir.webp' %}"
+                alt="Tanvir Ahmed"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <b>Tanvir Ahmed</b><small>Business Owner</small>
+              <p>
+                “Excellent quality and fast delivery. RANL PRINT made our
+                business cards look amazing!”
+              </p>
+              <span>★★★★★</span>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="avatar pink">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/testimonial-nusrat.webp' %}"
+                alt="Nusrat Jahan"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <b>Nusrat Jahan</b><small>Event Organizer</small>
+              <p>
+                “Great service and professional team. Our event materials were
+                perfect and delivered on time.”
+              </p>
+              <span>★★★★★</span>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="avatar yellow">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/testimonial-rakibul.webp' %}"
+                alt="Rakibul Hasan"
+                loading="eager"
+              />
+            </div>
+            <div>
+              <b>Rakibul Hasan</b><small>Freelancer</small>
+              <p>
+                “High-quality printing with affordable price. Highly
+                recommended.”
+              </p>
+              <span>★★★★★</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light blog-section" id="blog">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow blue">LATEST BLOG</span>
+            <h2>Tips, Ideas & <span>Printing Insights</span></h2>
+          </div>
+          <a class="text-link" href="#blog">View All Posts →</a>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <div class="blog-img img-paper">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/blog-paper.webp' %}"
+                alt="Choosing the right paper"
+                loading="eager"
+              />
+            </div>
+            <span>Sep 15, 2026</span>
+            <h3>Choosing the Right Paper for Your Print Projects</h3>
+          </article>
+          <article class="blog-card reveal delay-1">
+            <div class="blog-img img-design">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/blog-design.webp' %}"
+                alt="Business card design ideas"
+                loading="eager"
+              />
+            </div>
+            <span>Sep 10, 2026</span>
+            <h3>Creative Design Ideas for Business Cards</h3>
+          </article>
+          <article class="blog-card reveal delay-2">
+            <div class="blog-img img-file">
+              <img
+                class="managed-image"
+                src="{% static 'site/assets/images/blog-file.webp' %}"
+                alt="Preparing print files"
+                loading="eager"
+              />
+            </div>
+            <span>Sep 05, 2026</span>
+            <h3>How to Prepare Files for Best Print Quality</h3>
+          </article>
+          <article class="blog-cta reveal delay-3">
+            <span>READY TO PRINT?</span>
+            <h3>Have Something<br />to Print?</h3>
+            <p>Let's make it real. Get a quote today.</p>
+            <a class="btn btn-primary" href="#quote">Get a Quote →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light track-section" id="track">
+      <div class="container">
+        <div class="track-card reveal">
+          <div>
+            <span class="eyebrow blue">ORDER TRACKING</span>
+            <h2>Track Your <span>Print Order</span></h2>
+            <p>
+              Enter the order number and phone number used when placing the
+              order.
+            </p>
+          </div>
+          <form id="trackOrderForm" class="track-form">
+            <input
+              name="order_number"
+              placeholder="Order number"
+              required
+            /><input name="phone" placeholder="Phone number" required /><button
+              class="btn btn-primary"
+              type="submit"
+            >
+              Track Order →
+            </button>
+            <p id="trackOrderStatus" class="form-status"></p>
+          </form>
+          <div id="trackOrderResult" class="track-result" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">CONTACT RANL PRINT</span>
+          <h2>Let's create something <span>worth printing.</span></h2>
+          <p>
+            Tell us what you need, and our team will help you choose the right
+            print solution.
+          </p>
+          <div class="contact-list">
+            <a data-contact-phone href="#contact" hidden>☎ <span></span></a
+            ><a data-contact-email href="#contact" hidden>✉ <span></span></a
+            ><a data-contact-location href="#contact"
+              >⌖ <span>Sajborkhila, Sherpur 2100, Bangladesh</span></a
+            ><a data-contact-hours href="#contact"
+              >◷ <span>Sat–Thu · 9:00 AM–8:00 PM</span></a
+            >
+          </div>
+        </div>
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <div class="field-row">
+            <label
+              >Name<input name="name" placeholder="Your name" required /></label
+            ><label
+              >Phone<input name="phone" placeholder="Phone number" required
+            /></label>
+          </div>
+          <label
+            >Email<input
+              name="email"
+              type="email"
+              placeholder="Email address" /></label
+          ><label
+            >Message<textarea
+              name="message"
+              rows="5"
+              placeholder="How can we help?"
+              required
+            ></textarea></label
+          ><button class="btn btn-primary" type="submit">Send Message →</button>
+          <p class="form-status" id="contactStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            class="footer-logo"
+            src="{% static 'site/assets/ranl-print-logo3.png' %}"
+            alt="RANL PRINT"
+          />
+          <p>
+            Your trusted printing partner for high-quality prints, creative
+            designs and reliable delivery across Bangladesh.
+          </p>
+          <div class="socials">
+            <a href="#">f</a><a href="#">◎</a><a href="#">▶</a
+            ><a href="#">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#top">Home</a><a href="#services">Services</a
+          ><a href="#works">Our Works</a><a href="#about">About Us</a
+          ><a href="#quote">Get a Quote</a><a href="#blog">Blog</a>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <a href="#quote">Business Cards</a><a href="#quote">Flyers</a
+          ><a href="#quote">Brochures</a><a href="#quote">Posters</a
+          ><a href="#quote">Stickers</a><a href="#quote">Photo Printing</a
+          ><a href="#quote">Large Format</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p data-footer-phone hidden>☎ <span></span></p>
+          <p data-footer-email hidden>✉ <span></span></p>
+          <p data-footer-location>⌖ Sajborkhila, Sherpur 2100, Bangladesh</p>
+          <p data-footer-hours>◷ Sat–Thu · 9:00 AM–8:00 PM</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 RANL PRINT. All rights reserved.</span
+        ><span>Privacy Policy &nbsp;|&nbsp; Terms & Conditions</span>
+      </div>
+    </footer>
+
+    <script src="{% static 'site/js/config.js' %}?v=20261021-1"></script>
+    <script src="{% static 'site/js/preview.js' %}?v=20260929-4"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Invoice {{ order.order_number }} · RANL PRINT</title>
+<style>
+:root{--navy:#102342;--blue:#0788f9;--pink:#f20b83;--yellow:#ffc400;--muted:#61718a;--line:#e4eaf2}
+*{box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;color:var(--navy);background:#f1f4f8;margin:0;font-size:14px}
+.sheet{max-width:900px;margin:28px auto;background:#fff;padding:38px 42px;border:1px solid #e0e6ef;box-shadow:0 12px 35px #10234212;position:relative;overflow:hidden}
+.top-accent{height:5px;position:absolute;left:0;right:0;top:0;background:linear-gradient(90deg,var(--blue) 0 35%,var(--pink) 35% 68%,var(--yellow) 68% 82%,var(--navy) 82%)}
+.head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:8px 0 24px;border-bottom:2px solid var(--navy)}
+.brand img{display:block;max-width:300px;max-height:92px;object-fit:contain;object-position:left center}
+.brand-name{font-size:29px;line-height:1.1;font-weight:900;letter-spacing:-.8px}
+.tagline{margin-top:7px;color:var(--muted);font-size:13px;letter-spacing:.2px}
+.meta{text-align:right;min-width:180px}
+.meta-label{font-size:12px;font-weight:800;letter-spacing:1.8px;color:var(--blue)}
+.invoice-no{font-size:17px;font-weight:800;margin-top:5px;overflow-wrap:anywhere}
+.invoice-date{color:var(--muted);margin-top:4px}
+.customer{display:flex;justify-content:space-between;gap:24px;margin:25px 0 30px}
+.customer-card{flex:1;min-width:0;line-height:1.55}
+.section-label{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:7px}
+.customer-name{font-size:16px;font-weight:800}
+.payment-card{text-align:right;min-width:165px}
+.status{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:999px;background:#eef6ff;color:#1456a0;font-weight:700;font-size:12px}
+.table{width:100%;border-collapse:collapse;margin-top:4px}
+.table thead{background:#f4f8fc}
+.table th{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:#4c5d76;padding:13px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.table td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.table tbody tr:nth-child(even){background:#fcfdff}
+.num{text-align:right!important;white-space:nowrap}
+.item-name{font-weight:700}
+.item-description{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.summary-row{display:flex;justify-content:flex-end;margin-top:22px}
+.totals{width:330px;max-width:100%}
+.totals div{display:flex;justify-content:space-between;gap:20px;padding:7px 2px;color:#34445d}
+.totals b{color:var(--navy);white-space:nowrap}
+.grand{font-size:20px;font-weight:900;border-top:2px solid var(--navy);margin-top:7px;padding-top:13px!important;color:var(--navy)!important}
+.grand span:last-child{background:linear-gradient(90deg,#eaf6ff,#fff0f8);padding:5px 8px;border-radius:7px}
+.paid span,.paid b{color:#07834f!important}
+.due span,.due b{color:#d92d20!important}
+.footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:11px;line-height:1.5}
+.footer strong{color:var(--navy)}
+.footer-tagline{text-align:right;letter-spacing:1.2px;font-weight:800;color:#49617f}
+.actions{position:fixed;right:20px;top:20px;z-index:5}
+.btn{padding:11px 15px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer}
+@media print{body{background:#fff}.sheet{margin:0 auto;padding:28px 32px;box-shadow:none;border:0;max-width:none}.actions{display:none}.top-accent{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:620px){.sheet{margin:0;padding:28px 18px}.head{align-items:flex-start;flex-direction:column}.brand img{max-width:250px;max-height:75px}.meta{text-align:left}.customer{flex-direction:column}.payment-card{text-align:left}.table{font-size:12px}.table th,.table td{padding:10px 6px}.footer{flex-direction:column}.footer-tagline{text-align:left}.summary-row{justify-content:stretch}.totals{width:100%}}
+</style>
+</head>
+<body>
+<div class="actions"><button class="btn" onclick="window.print()">Print / Save PDF</button></div>
+<main class="sheet">
+<div class="top-accent"></div>
+<header class="head">
+  <div class="brand">
+    <img src="{% static 'site/assets/ranl-print-logo2.png' %}" alt="RANL PRINT" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="brand-name" style="display:none">RANL PRINT</div>
+    <div class="tagline">Design · Print · Deliver</div>
+  </div>
+  <div class="meta">
+    <div class="meta-label">INVOICE</div>
+    <div class="invoice-no">{{ order.order_number }}</div>
+    <div class="invoice-date">{{ order.created_at|date:"d M Y" }}</div>
+  </div>
+</header>
+<section class="customer">
+  <div class="customer-card">
+    <div class="section-label">Bill To</div>
+    <div class="customer-name">{{ order.customer.name }}</div>
+    {% if order.customer.phone %}<div>{{ order.customer.phone }}</div>{% endif %}
+    {% if order.customer.company %}<div>{{ order.customer.company }}</div>{% endif %}
+    {% if order.customer.address %}<div>{{ order.customer.address|linebreaksbr }}</div>{% endif %}
+  </div>
+  <div class="customer-card payment-card">
+    <div class="section-label">Payment Status</div>
+    <div class="status">{{ order.get_payment_status_display }}</div>
+    {% if order.due_date %}<div class="invoice-date">Due: {{ order.due_date|date:"d M Y" }}</div>{% endif %}
+  </div>
+</section>
+<table class="table">
+<thead><tr><th>Item / Description</th><th>Qty</th><th class="num">Unit Price</th><th class="num">Total</th></tr></thead>
+<tbody>
+{% for item in order.items.all %}
+<tr>
+<td><span class="item-name">{{ item.product.name }}</span>{% if item.description %}<span class="item-description">{{ item.description }}</span>{% endif %}</td>
+<td>{{ item.quantity }}</td>
+<td class="num">৳{{ item.unit_price|floatformat:2 }}</td>
+<td class="num">৳{{ item.total_price|floatformat:2 }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<div class="summary-row"><div class="totals">
+<div><span>Subtotal</span><b>৳{{ order.subtotal|floatformat:2 }}</b></div>
+<div><span>Discount</span><b>− ৳{{ order.discount|floatformat:2 }}</b></div>
+<div><span>Delivery</span><b>৳{{ order.delivery_fee|floatformat:2 }}</b></div>
+<div class="grand"><span>Total</span><span>৳{{ order.total|floatformat:2 }}</span></div>
+<div class="paid"><span>Paid</span><b>৳{{ order.paid_amount|floatformat:2 }}</b></div>
+<div class="due"><span>Due</span><b>৳{{ order.due_amount|floatformat:2 }}</b></div>
+</div></div>
+<footer class="footer">
+<div>Thank you for choosing <strong>RANL PRINT</strong>. Please retain this invoice for your records.</div>
+<div class="footer-tagline">DESIGN&nbsp; · &nbsp;PRINT&nbsp; · &nbsp;DELIVER</div>
+</footer>
+</main>
+</body>
+</html>

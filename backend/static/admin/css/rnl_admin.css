@@ -1,0 +1,5 @@
+#header{background:#0b1f3a;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+#site-name a{font-size:20px;font-weight:700;letter-spacing:.2px}#site-name a span{font-weight:400;opacity:.8;margin-left:6px}
+.module h2,.module caption{background:#155e75}
+.button,.submit-row input[type=submit],input[type=submit],.object-tools a{border-radius:7px}
+#content{max-width:1400px}
